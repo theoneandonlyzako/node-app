@@ -1,8 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require('inquirer');
-const Choice = require('inquirer/lib/objects/choice');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -18,6 +17,11 @@ const questions = [
               return false;
             }
         }
+    },
+    {
+        type:'input',
+        name: 'userName',
+        message: 'Enter your GitHub user name.'
     },
     {
         type: 'input',
@@ -36,7 +40,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contribute',
+        name: 'contributors',
         message: 'Please include and contributers.'
     },
     {
@@ -46,15 +50,15 @@ const questions = [
     }, 
     {
         type: 'checkbox',
-        name: 'badge',
+        name: 'license',
         message: 'Please select a license.',
-        choices: ['MIT', 'GNU']
+        choices: [
+            'GNU General Public License v3.0', 
+            'MIT License',
+            'Unlicense',
+            'Apache License 2.0'
+        ]
     }, 
-    {
-        type:'input',
-        name: 'github',
-        message: 'Enter your GitHub user name.'
-    },
     {
         type: 'input',
         name: 'email',
@@ -65,7 +69,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
-    fs.writeFile("./demo/"+fileName, data, function(err) {
+    fs.writeFile("./dist/"+fileName, data, function(err) {
       if (err) {
         return console.log(err);
       }
@@ -78,7 +82,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(data) {
-      writeToFile("README.md", generateMarkdown(data));
+      writeToFile("generatedREADME.md", generateMarkdown(data));
     })
   }
 
