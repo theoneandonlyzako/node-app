@@ -20,4 +20,4 @@ GIVEN a command-line application that accepts user input WHEN I am prompted for 
 
 - Git Repo - https://github.com/theoneandonlyzako/node-app</br>
 - Direct link - https://github.com/theoneandonlyzako/node-app</br></br>
-![img](node-app.gif)
+![img](site.gif)
