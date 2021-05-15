@@ -1,19 +1,19 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const fs = require("fs");
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// List of questions for user input
 const questions = [
     {
         type: 'input',
         name: 'title',
-        message: "What is your projects name?",
+        message: "What is the name of the project?",
         validate: nameInput => {
             if (nameInput) {
               return true;
             } else {
-              console.log('Please enter your projects name!');
+              console.log('Please enter the projects name!');
               return false;
             }
         }
@@ -21,39 +21,39 @@ const questions = [
     {
         type:'input',
         name: 'userName',
-        message: 'Enter your GitHub user name.'
+        message: 'What is your GitHub user name.'
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Please enter a brief descritption of your project.'
+        message: 'Enter a brief descritption of the project.'
     },
     {
         type: 'input',
         name: 'install',
-        message: 'Please include installation instructions'
+        message: 'What needs to be installed or source-linked in order for this app to work?'
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Please add usage information.'
+        message: 'What is this app used for?'
     },
     {
         type: 'input',
         name: 'contributors',
-        message: 'Please include and contributers.'
+        message: 'Who contributed to this project.'
     },
     {
         type: 'input',
-        name :'test',
-        message: 'Please enter test instructions.'
+        name :'steps',
+        message: 'What Steps were taken to code this app?'
     }, 
     {
         type: 'checkbox',
         name: 'license',
-        message: 'Please select a license.',
+        message: 'Which license(s) did you use.',
         choices: [
-            'GNU General Public License', 
+            'GNU General Public', 
             'MIT',
             'Unlicense',
             'Apache'
@@ -66,7 +66,7 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// Writes README file
 function writeToFile(fileName, data) {
 
     fs.writeFile("./dist/"+fileName, data, function(err) {
@@ -78,7 +78,7 @@ function writeToFile(fileName, data) {
     
     }
 
-// Function call to initialize app
+// Initializes app
 function init() {
     inquirer.prompt(questions)
     .then(function(data) {

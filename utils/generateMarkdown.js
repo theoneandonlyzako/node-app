@@ -1,13 +1,13 @@
 const fs = require('fs');
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+
+// Returns a license badge based on which license is used
 function renderLicenseBadge(data) {
   const selectLice = data.license[0];
   let thisLice = " "
   if (selectLice === 'MIT') {
     thisLice = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
   };
-   if (selectLice === 'GNU General Public License') {
+   if (selectLice === 'GNU General Public') {
     thisLice = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
   };
   if (selectLice === 'Apache') {
@@ -22,25 +22,12 @@ function renderLicenseBadge(data) {
  return thisLice;
 };
 
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-// return `${data.license}`;
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  // if return `${data.license}`;
-}
-
-// TODO: Create a function to generate markdown for README
+// Creates the markdown for README
 function generateMarkdown(data) {  
   return `# ${data.title}
-  Direct Link: https://github.com/${data.github}/${data.title}
+  Direct Link: https://github.com/${data.userName}/${data.title}
   <br/>
-  Repo Link: https://github.com/${data.github}
+  Repo Link: https://github.com/${data.userName}
   <br/>
   ${renderLicenseBadge(data)}
 
@@ -52,26 +39,26 @@ function generateMarkdown(data) {
   * [Usage](#usage)
   * [License](#license)
   * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
+  * [Steps](#steps)
+  * [Contact](#contact)
   
   # Installation
-  The following necessary dependencies must be installed to run the application properly: ${data.install}
+  The following must be installed or linked in order to run the application properly: ${data.install}
   
   # Usage
-  ​This application is used for ${data.usage}
+  ​${data.usage}
  
   # License
-  This project is license under the ${data.license} license.
+  This project is licensed under the ${data.license} license.
   
   # Contributing
   ​Contributors: ${data.contributors}
   
-  # Tests
-  To run tests, you need to run the following command: ${data.test}
+  # Steps
+  ${data.steps}
   
-  # Questions
-  If you have any questions about the repo, open an issue or contact ${data.userName} directly ${data.email}.
+  # Contact
+  If you have any questions about the repo, open an issue or contact me directly at ${data.email}.
 `;
 }
 
