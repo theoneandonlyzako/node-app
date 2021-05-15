@@ -1,8 +1,11 @@
-# kjhhhhhh
-  undefined
+# node-app
+  Direct Link: https://github.com/undefined/node-app
+  Repo Link: https://github.com/undefined
+  <br/>
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   # Description
-  kajshdfkjh
+  this project creates a README file based on the information given
   
   # Table of Contents 
   * [Installation](#installation)
@@ -13,19 +16,19 @@
   * [Questions](#questions)
   
   # Installation
-  The following necessary dependencies must be installed to run the application properly: kajshdfjkh
+  The following necessary dependencies must be installed to run the application properly: fill out the questions 
   
   # Usage
-  ​This application is used for kjashdfjkh
+  ​This application is used for for any project
  
   # License
-  This project is license under the GNU General Public License v3.0 license.
+  This project is license under the MIT license.
   
   # Contributing
-  ​Contributors: kljashdf
+  ​Contributors: Justin V. Dylan T.
   
   # Tests
-  To run tests, you need to run the following command: klajhsdf
+  To run tests, you need to run the following command: nope
   
   # Questions
-  If you have any questions about the repo, open an issue or contact kljahsdfkj directly asdg.
+  If you have any questions about the repo, open an issue or contact theoneandonlyzako directly theoneandonlyzako@gmail.com.
