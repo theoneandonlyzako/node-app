@@ -17,19 +17,19 @@
   * [Contact](#contact)
   
   # Installation
-  The following must be installed or linked in order to run the application properly:  npm, inquirer
+  The following must be installed or linked in order to run the application properly: npm, inquirer
   
   # Usage
-  ​​​This application is used to auto generate the README file for your next project
+  ​​​​This application is used to auto generate the README file for your next project
  
   # License
-  This project is licensed under the GNU General Public,Unlicense license.
+  This project is licensed under the GNU General Public license.
   
   # Contributing
   ​Contributors: Dylan T. Justin V.
   
   # Steps
-  a Lot! 
+  a Lot!
   
   # Contact
   If you have any questions about the repo, open an issue or contact me directly at theoneandonlyzako@gmail.com.
